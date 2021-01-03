@@ -25,10 +25,9 @@ export class CodelensProvider implements vscode.CodeLensProvider {
     token: vscode.CancellationToken
   ): vscode.CodeLens[] | Thenable<vscode.CodeLens[]> {
     if (
-      true
-      //   vscode.workspace
-      //     .getConfiguration("urlify-me")
-      //     .get("enableCodeLens", true)
+        vscode.workspace
+          .getConfiguration("urlify-me")
+          .get("enableCodeLens", true)
     ) {
       this.codeLenses = [];
       const regex = new RegExp(this.regex);
@@ -44,10 +43,10 @@ export class CodelensProvider implements vscode.CodeLensProvider {
         );
         if (range) {
           const originalLink = document.getText(range);
-          const newLink = "https://www.nbcnews.com" + originalLink.substring(1, originalLink.length - 1);
+          const newLink = originalLink.substring(1, originalLink.length - 1);
 
           const cmd = {
-            title: "Test command",
+            title: "Open link",
             tooltip: "Tooltip provided by sample extension",
             command: "urlify-me.codelensAction",
             arguments: [newLink],
@@ -66,17 +65,10 @@ export class CodelensProvider implements vscode.CodeLensProvider {
     token: vscode.CancellationToken
   ) {
     if (
-      true
-      //   vscode.workspace
-      //     .getConfiguration("urlify-me")
-      //     .get("enableCodeLens", true)
+        vscode.workspace
+          .getConfiguration("urlify-me")
+          .get("enableCodeLens", true)
     ) {
-    //   codeLens.command = {
-    //     title: "Codelens provided by sample extension",
-    //     tooltip: "Tooltip provided by sample extension",
-    //     command: "urlify-me.codelensAction",
-    //     arguments: ["Argument 1", false],
-    //   };
       return codeLens;
     }
     return null;
