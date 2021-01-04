@@ -1,16 +1,16 @@
 {
   "name": "urlify-me",
   "displayName": "Urlify-Me Cap'n",
-  "description": "Samples for VS Code's CodeLens API",
+  "description": "Generate codelens links to express server routes",
   "version": "0.0.1",
-  "publisher": "ms-vscode",
+  "publisher": "rafikis75",
   "engines": {
     "vscode": "^1.26.0"
   },
   "repository": {
     "url": "https://github.com/rafistrauss/urlify-me"
   },
-  "icon": "./images/icon.png",
+  "icon": "images/icon.png",
   "categories": [
     "Other"
   ],
