@@ -2,7 +2,7 @@
   "name": "urlify-me",
   "displayName": "Urlify-Me Cap'n",
   "description": "Generate codelens links to express server routes",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "rafikis75",
   "engines": {
     "vscode": "^1.26.0"
@@ -15,7 +15,7 @@
     "Other"
   ],
   "activationEvents": [
-    "*"
+    "onLanguage:javascript"
   ],
   "main": "./out/extension",
   "contributes": {
@@ -36,6 +36,10 @@
         "urlify-me.enableCodeLens": {
           "type": "boolean",
           "default": true
+        },
+        "urlify-me.baseUrls": {
+          "type": "array",
+          "default": []
         }
       }
     }

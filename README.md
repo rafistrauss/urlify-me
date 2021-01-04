@@ -1,29 +1,28 @@
 # urlify-me README
 
-Generate links from express server definitions
+Generate links from express route definitions
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- Generate links from express route definitions 
+- Supports variable routes (e.g. `server.get('/:variable')` will let you specify what to use each time you click the codelens)
+- Supports optional routes (e.g. `server.get('/route(/optional)?')`)
 
-For example if there is an image subfolder under your extension project workspace:
 
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+![usage](images/usage.gif)
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
 This extension contributes the following settings:
 
-* `myExtension.enableCodeLens`: enable/disable codelens
-* `myExtension.baseUrls`: string array of available base urls, e.g. ["http://www.example.com", "https://dev.example.com"]
+* `urlify-me.enableCodeLens`: enable/disable codelens
+* `urlify-me.baseUrls`: string array of available base urls, e.g. ["http://www.example.com", "https://dev.example.com"]
 
 ## Release Notes
 
-### 1.0.0
+### 0.0.1
 
 Initial release of urlify-me.
+### 0.0.2
+
+Only trigger codelens for js files
+Add 
